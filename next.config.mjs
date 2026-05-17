@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  basePath: process.env.NODE_ENV === "production" ? "/Vezura10x" : "",
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
+    unoptimized: true,
   },
+  trailingSlash: true,
 };
 
 export default nextConfig;
